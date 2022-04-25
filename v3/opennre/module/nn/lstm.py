@@ -1,5 +1,6 @@
-import torch
+
 import torch.nn as nn
+
 
 class LSTM(nn.Module):
 
@@ -17,11 +18,11 @@ class LSTM(nn.Module):
         if bidirectional:
             hidden_size /= 2
         self.lstm = nn.LSTM(input_size, 
-                          hidden_size, 
-                          num_layers, 
-                          nonlinearity=activation_function, 
-                          dropout=dropout, 
-                          bidirectional=bidirectional)
+                            hidden_size,
+                            num_layers,
+                            nonlinearity=activation_function,
+                            dropout=dropout,
+                            bidirectional=bidirectional)
 
     def forward(self, x):
         """
@@ -31,7 +32,7 @@ class LSTM(nn.Module):
             output features: (B, L, H_EMBED)
         """
         # Check size of tensors
-        x = x.transpose(0, 1) # (L, B, I_EMBED)
-        x, h, c = self.lstm(x) # (L, B, H_EMBED)
-        x = x.transpose(0, 1) # (B, L, I_EMBED)
+        x = x.transpose(0, 1)  # (L, B, I_EMBED)
+        x, h, c = self.lstm(x)  # (L, B, H_EMBED)
+        x = x.transpose(0, 1)  # (B, L, I_EMBED)
         return x

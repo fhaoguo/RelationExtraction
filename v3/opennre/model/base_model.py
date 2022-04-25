@@ -1,6 +1,6 @@
-import torch
+
 from torch import nn
-import json
+
 
 class SentenceRE(nn.Module):
     def __init__(self):
@@ -34,6 +34,7 @@ class BagRE(nn.Module):
         """
         raise NotImplementedError
 
+
 class FewShotRE(nn.Module):
     def __init__(self):
         super().__init__()
@@ -55,6 +56,7 @@ class FewShotRE(nn.Module):
         https://github.com/thunlp/FewRel
         """
         raise NotImplementedError
+
 
 class NER(nn.Module):
     def __init__(self):

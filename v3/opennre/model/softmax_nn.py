@@ -2,6 +2,7 @@ import torch
 from torch import nn, optim
 from .base_model import SentenceRE
 
+
 class SoftmaxNN(SentenceRE):
     """
     Softmax classifier for sentence-level relation extraction.

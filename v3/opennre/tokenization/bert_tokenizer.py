@@ -19,17 +19,11 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import collections
-import unicodedata
-import six
-
 from .basic_tokenizer import BasicTokenizer
+from .utils import (load_vocab,
+                    convert_by_vocab)
 from .word_piece_tokenizer import WordpieceTokenizer
-from .utils import (convert_to_unicode, 
-                   load_vocab, 
-                   convert_by_vocab, 
-                   convert_tokens_to_ids, 
-                   convert_ids_to_tokens)
+
 
 class BertTokenizer(object):
 

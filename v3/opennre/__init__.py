@@ -1,12 +1,15 @@
+
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-from .pretrain import check_root, get_model, download, download_pretrain
 import logging
-import os 
+import os
+
+from .pretrain import check_root, get_model, download, download_pretrain
 
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s', level=os.environ.get("LOGLEVEL", "INFO"))
+
 
 def fix_seed(seed=12345):
     import torch

@@ -1,10 +1,10 @@
 import torch
 from torch import nn, optim
-import json
-from .data_loader import SentenceRELoader, BagRELoader
-from .utils import AverageMeter
 from tqdm import tqdm
-import os
+
+from .data_loader import BagRELoader
+from .utils import AverageMeter
+
 
 class BagRE(nn.Module):
 

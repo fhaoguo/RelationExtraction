@@ -1,5 +1,7 @@
 import unittest
+
 import opennre
+
 
 class TestInference(unittest.TestCase):
 
@@ -9,6 +11,7 @@ class TestInference(unittest.TestCase):
         print(result)
         self.assertEqual(result[0], 'father')
         self.assertTrue(abs(result[1] - 0.7500484585762024) < 1e-6)
+
 
 if __name__ == '__main__':
     unittest.main()

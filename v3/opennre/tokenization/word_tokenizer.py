@@ -19,14 +19,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 
-import unicodedata
-
 from .utils import (load_vocab,
-                   convert_to_unicode,
-                   clean_text,
-                   split_on_whitespace,
-                   convert_by_vocab,
-                   tokenize_chinese_chars)
+                    convert_to_unicode,
+                    clean_text,
+                    split_on_whitespace,
+                    convert_by_vocab,
+                    tokenize_chinese_chars)
+
 
 class WordTokenizer(object):
     """Runs WordPiece tokenziation."""

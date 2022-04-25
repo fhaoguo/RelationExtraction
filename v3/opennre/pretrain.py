@@ -1,15 +1,16 @@
+import json
+import logging
+import os
+
+import numpy as np
+import torch
+
 from . import encoder
 from . import model
-from . import framework
-import torch
-import os
-import sys
-import json
-import numpy as np
-import logging
 
 root_url = "https://thunlp.oss-cn-qingdao.aliyuncs.com/"
 default_root_path = os.path.join(os.getenv('HOME'), '.opennre')
+
 
 def check_root(root_path=default_root_path):
     if not os.path.exists(root_path):

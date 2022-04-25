@@ -2,11 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-from ..module.nn import CNN
-from ..module.pool import MaxPool
 from .base_encoder import BaseEncoder
 
-from nltk import word_tokenize
 
 class PCNNEncoder(BaseEncoder):
 

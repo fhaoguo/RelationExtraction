@@ -1,6 +1,8 @@
 import torch
-from torch import nn, optim
+from torch import nn
+
 from .base_model import BagRE
+
 
 class BagAverage(BagRE):
     """
