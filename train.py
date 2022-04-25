@@ -35,9 +35,9 @@ framework = SentenceRE(
     test_path=os.path.join(root_path, 'data/people-relation/people-relation_val.txt'),
     model=model,
     ckpt=ckpt,
-    batch_size=64, # Modify the batch size w.r.t. your device
-    max_epoch=1,
-    lr=2e-5,
+    batch_size=96,  # Modify the batch size w.r.t. your device
+    max_epoch=2,
+    lr=5e-5,  # 2e-5,
     opt='adamw'
 )
 
